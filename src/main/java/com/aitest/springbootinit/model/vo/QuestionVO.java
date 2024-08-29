@@ -3,14 +3,12 @@ package com.aitest.springbootinit.model.vo;
 import cn.hutool.json.JSONUtil;
 import com.aitest.springbootinit.model.dto.question.QuestionContentDTO;
 import com.aitest.springbootinit.model.entity.Question;
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
+
 
 /**
  * 题目表视图
@@ -84,7 +82,11 @@ public class QuestionVO implements Serializable {
         }
         QuestionVO questionVO = new QuestionVO();
         BeanUtils.copyProperties(question, questionVO);
-        questionVO.setQuestionContent(JSONUtil.toBean(question.getQuestionContent(), QuestionContentDTO.class));
+        // 校验题目内容是否为空
+        String questionContent = question.getQuestionContent();
+        if(questionContent != null ){
+            questionVO.setQuestionContent(JSONUtil.toBean(questionContent, QuestionContentDTO.class));
+        }
         return questionVO;
     }
 }

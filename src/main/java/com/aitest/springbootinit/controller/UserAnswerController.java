@@ -1,5 +1,6 @@
 package com.aitest.springbootinit.controller;
 
+import cn.hutool.json.JSONUtil;
 import com.aitest.springbootinit.annotation.AuthCheck;
 import com.aitest.springbootinit.common.BaseResponse;
 import com.aitest.springbootinit.common.DeleteRequest;
@@ -8,10 +9,10 @@ import com.aitest.springbootinit.common.ResultUtils;
 import com.aitest.springbootinit.constant.UserConstant;
 import com.aitest.springbootinit.exception.BusinessException;
 import com.aitest.springbootinit.exception.ThrowUtils;
-import com.aitest.springbootinit.model.dto.userAnswer.UserAnswerAddRequest;
-import com.aitest.springbootinit.model.dto.userAnswer.UserAnswerEditRequest;
-import com.aitest.springbootinit.model.dto.userAnswer.UserAnswerQueryRequest;
-import com.aitest.springbootinit.model.dto.userAnswer.UserAnswerUpdateRequest;
+import com.aitest.springbootinit.model.dto.useranswer.UserAnswerAddRequest;
+import com.aitest.springbootinit.model.dto.useranswer.UserAnswerEditRequest;
+import com.aitest.springbootinit.model.dto.useranswer.UserAnswerQueryRequest;
+import com.aitest.springbootinit.model.dto.useranswer.UserAnswerUpdateRequest;
 import com.aitest.springbootinit.model.entity.User;
 import com.aitest.springbootinit.model.entity.UserAnswer;
 import com.aitest.springbootinit.model.vo.UserAnswerVO;
@@ -24,6 +25,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * 用户答题表接口
@@ -54,9 +56,11 @@ public class UserAnswerController {
     @PostMapping("/add")
     public BaseResponse<Long> addUserAnswer(@RequestBody UserAnswerAddRequest userAnswerAddRequest, HttpServletRequest request) {
         ThrowUtils.throwIf(userAnswerAddRequest == null, ErrorCode.PARAMS_ERROR);
-        // todo 在此处将实体类和 DTO 进行转换
+        // 在此处将实体类和 DTO 进行转换
         UserAnswer userAnswer = new UserAnswer();
         BeanUtils.copyProperties(userAnswerAddRequest, userAnswer);
+        List<String> choices = userAnswerAddRequest.getChoices();
+        userAnswer.setChoices(JSONUtil.toJsonStr(choices));
         // 数据校验
         userAnswerService.validUserAnswer(userAnswer, true);
         // todo 填充默认值
@@ -112,6 +116,8 @@ public class UserAnswerController {
         // todo 在此处将实体类和 DTO 进行转换
         UserAnswer userAnswer = new UserAnswer();
         BeanUtils.copyProperties(userAnswerUpdateRequest, userAnswer);
+        List<String> choices = userAnswerUpdateRequest.getChoices();
+        userAnswer.setChoices(JSONUtil.toJsonStr(choices));
         // 数据校验
         userAnswerService.validUserAnswer(userAnswer, false);
         // 判断是否存在
@@ -218,6 +224,8 @@ public class UserAnswerController {
         // todo 在此处将实体类和 DTO 进行转换
         UserAnswer userAnswer = new UserAnswer();
         BeanUtils.copyProperties(userAnswerEditRequest, userAnswer);
+        List<String> choices = userAnswerEditRequest.getChoices();
+        userAnswer.setChoices(JSONUtil.toJsonStr(choices));
         // 数据校验
         userAnswerService.validUserAnswer(userAnswer, false);
         User loginUser = userService.getLoginUser(request);

@@ -1,11 +1,11 @@
 package com.aitest.springbootinit.service;
 
+import com.aitest.springbootinit.model.dto.useranswer.UserAnswerQueryRequest;
+import com.aitest.springbootinit.model.entity.UserAnswer;
+import com.aitest.springbootinit.model.vo.UserAnswerVO;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.aitest.springbootinit.model.dto.userAnswer.UserAnswerQueryRequest;
-import com.aitest.springbootinit.model.entity.UserAnswer;
-import com.aitest.springbootinit.model.vo.UserAnswerVO;
 
 import javax.servlet.http.HttpServletRequest;
 
