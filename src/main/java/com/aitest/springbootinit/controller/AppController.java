@@ -14,6 +14,7 @@ import com.aitest.springbootinit.model.dto.app.AppQueryRequest;
 import com.aitest.springbootinit.model.dto.app.AppUpdateRequest;
 import com.aitest.springbootinit.model.entity.App;
 import com.aitest.springbootinit.model.entity.User;
+import com.aitest.springbootinit.model.enums.ReviewStatusEnum;
 import com.aitest.springbootinit.model.vo.AppVO;
 import com.aitest.springbootinit.service.AppService;
 import com.aitest.springbootinit.service.UserService;
@@ -62,6 +63,8 @@ public class AppController {
         // todo 填充默认值
         User loginUser = userService.getLoginUser(request);
         app.setUserId(loginUser.getId());
+        //创建和更新应用需要待审核 审核状态枚举
+        app.setReviewStatus(ReviewStatusEnum.REVIEWING.getValue());
         // 写入数据库
         boolean result = appService.save(app);
         ThrowUtils.throwIf(!result, ErrorCode.OPERATION_ERROR);
@@ -229,6 +232,8 @@ public class AppController {
         if (!oldApp.getUserId().equals(loginUser.getId()) && !userService.isAdmin(loginUser)) {
             throw new BusinessException(ErrorCode.NO_AUTH_ERROR);
         }
+        //重置审核状态
+        app.setReviewStatus(ReviewStatusEnum.REVIEWING.getValue());
         // 操作数据库
         boolean result = appService.updateById(app);
         ThrowUtils.throwIf(!result, ErrorCode.OPERATION_ERROR);

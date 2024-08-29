@@ -1,5 +1,6 @@
 package com.aitest.springbootinit.controller;
 
+import cn.hutool.json.JSONUtil;
 import com.aitest.springbootinit.annotation.AuthCheck;
 import com.aitest.springbootinit.common.BaseResponse;
 import com.aitest.springbootinit.common.DeleteRequest;
@@ -8,10 +9,10 @@ import com.aitest.springbootinit.common.ResultUtils;
 import com.aitest.springbootinit.constant.UserConstant;
 import com.aitest.springbootinit.exception.BusinessException;
 import com.aitest.springbootinit.exception.ThrowUtils;
-import com.aitest.springbootinit.model.dto.scoringResult.ScoringResultAddRequest;
-import com.aitest.springbootinit.model.dto.scoringResult.ScoringResultEditRequest;
-import com.aitest.springbootinit.model.dto.scoringResult.ScoringResultQueryRequest;
-import com.aitest.springbootinit.model.dto.scoringResult.ScoringResultUpdateRequest;
+import com.aitest.springbootinit.model.dto.scoringresult.ScoringResultAddRequest;
+import com.aitest.springbootinit.model.dto.scoringresult.ScoringResultEditRequest;
+import com.aitest.springbootinit.model.dto.scoringresult.ScoringResultQueryRequest;
+import com.aitest.springbootinit.model.dto.scoringresult.ScoringResultUpdateRequest;
 import com.aitest.springbootinit.model.entity.ScoringResult;
 import com.aitest.springbootinit.model.entity.User;
 import com.aitest.springbootinit.model.vo.ScoringResultVO;
@@ -24,6 +25,8 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * 评分结果表接口
@@ -54,9 +57,11 @@ public class ScoringResultController {
     @PostMapping("/add")
     public BaseResponse<Long> addScoringResult(@RequestBody ScoringResultAddRequest scoringResultAddRequest, HttpServletRequest request) {
         ThrowUtils.throwIf(scoringResultAddRequest == null, ErrorCode.PARAMS_ERROR);
-        // todo 在此处将实体类和 DTO 进行转换
+        // 在此处将实体类和 DTO 进行转换
         ScoringResult scoringResult = new ScoringResult();
         BeanUtils.copyProperties(scoringResultAddRequest, scoringResult);
+        List<String> resultProp = scoringResultAddRequest.getResultProp();
+        scoringResult.setResultProp(JSONUtil.toJsonStr(resultProp));
         // 数据校验
         scoringResultService.validScoringResult(scoringResult, true);
         // todo 填充默认值
@@ -109,9 +114,11 @@ public class ScoringResultController {
         if (scoringResultUpdateRequest == null || scoringResultUpdateRequest.getId() <= 0) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
-        // todo 在此处将实体类和 DTO 进行转换
+        // 在此处将实体类和 DTO 进行转换
         ScoringResult scoringResult = new ScoringResult();
         BeanUtils.copyProperties(scoringResultUpdateRequest, scoringResult);
+        List<String> resultProp = scoringResultUpdateRequest.getResultProp();
+        scoringResult.setResultProp(JSONUtil.toJsonStr(resultProp));
         // 数据校验
         scoringResultService.validScoringResult(scoringResult, false);
         // 判断是否存在
@@ -215,9 +222,11 @@ public class ScoringResultController {
         if (scoringResultEditRequest == null || scoringResultEditRequest.getId() <= 0) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
-        // todo 在此处将实体类和 DTO 进行转换
+        // 在此处将实体类和 DTO 进行转换
         ScoringResult scoringResult = new ScoringResult();
         BeanUtils.copyProperties(scoringResultEditRequest, scoringResult);
+        List<String> resultProp = scoringResultEditRequest.getResultProp();
+        scoringResult.setResultProp(JSONUtil.toJsonStr(resultProp));
         // 数据校验
         scoringResultService.validScoringResult(scoringResult, false);
         User loginUser = userService.getLoginUser(request);

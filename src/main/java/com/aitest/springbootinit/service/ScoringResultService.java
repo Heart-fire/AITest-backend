@@ -1,9 +1,9 @@
 package com.aitest.springbootinit.service;
 
+import com.aitest.springbootinit.model.dto.scoringresult.ScoringResultQueryRequest;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.aitest.springbootinit.model.dto.scoringResult.ScoringResultQueryRequest;
 import com.aitest.springbootinit.model.entity.ScoringResult;
 import com.aitest.springbootinit.model.vo.ScoringResultVO;
 
