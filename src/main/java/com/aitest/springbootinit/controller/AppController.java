@@ -1,10 +1,7 @@
 package com.aitest.springbootinit.controller;
 
 import com.aitest.springbootinit.annotation.AuthCheck;
-import com.aitest.springbootinit.common.BaseResponse;
-import com.aitest.springbootinit.common.DeleteRequest;
-import com.aitest.springbootinit.common.ErrorCode;
-import com.aitest.springbootinit.common.ResultUtils;
+import com.aitest.springbootinit.common.*;
 import com.aitest.springbootinit.constant.UserConstant;
 import com.aitest.springbootinit.exception.BusinessException;
 import com.aitest.springbootinit.exception.ThrowUtils;
@@ -25,6 +22,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 
 /**
  * 应用表接口
@@ -218,7 +216,7 @@ public class AppController {
         if (appEditRequest == null || appEditRequest.getId() <= 0) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
-        // todo 在此处将实体类和 DTO 进行转换
+        //在此处将实体类和 DTO 进行转换
         App app = new App();
         BeanUtils.copyProperties(appEditRequest, app);
         // 数据校验
@@ -241,4 +239,39 @@ public class AppController {
     }
 
     // endregion
+
+    /**
+     * 应用审核
+     * @param reviewRequest
+     * @param request
+     * @return
+     */
+    @PostMapping("/review")
+    @AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
+    public BaseResponse<Boolean> doAppReview(@RequestBody ReviewRequest reviewRequest,HttpServletRequest request){
+        ThrowUtils.throwIf(reviewRequest == null,ErrorCode.PARAMS_ERROR);
+        // 从对象中获取值
+        Long id = reviewRequest.getId();
+        Integer reviewStatus = reviewRequest.getReviewStatus();
+        // 校验ID和审核状态是否为空
+        ReviewStatusEnum reviewStatusEnum = ReviewStatusEnum.getEnumByValue(reviewStatus);
+        if(id == null || reviewStatusEnum == null){
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+        // 判断审核应用是否存在审核表中且已被审核
+        App oldApp = appService.getById(id);
+        ThrowUtils.throwIf(oldApp == null,ErrorCode.PARAMS_ERROR,"请勿重复审核");
+        // 如果未审核，则更新审核状态
+        User loginUser = userService.getLoginUser(request);
+        App app = new App();
+        app.setId(id);
+        app.setReviewStatus(reviewStatus);
+        app.setReviewMessage(reviewRequest.getReviewMessage());
+        app.setReviewerId(loginUser.getId());
+        app.setReviewTime(new Date());
+        // 如果更新失败抛出异常
+        boolean result = appService.updateById(app);
+        ThrowUtils.throwIf(!result,ErrorCode.PARAMS_ERROR,"更新失败");
+        return ResultUtils.success(true);
+    }
 }
