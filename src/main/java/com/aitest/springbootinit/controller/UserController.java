@@ -1,38 +1,28 @@
 package com.aitest.springbootinit.controller;
 
-import com.aitest.springbootinit.constant.UserConstant;
-import com.aitest.springbootinit.exception.BusinessException;
-import com.aitest.springbootinit.exception.ThrowUtils;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.aitest.springbootinit.annotation.AuthCheck;
 import com.aitest.springbootinit.common.BaseResponse;
 import com.aitest.springbootinit.common.DeleteRequest;
 import com.aitest.springbootinit.common.ErrorCode;
 import com.aitest.springbootinit.common.ResultUtils;
-import com.aitest.springbootinit.model.dto.user.UserAddRequest;
-import com.aitest.springbootinit.model.dto.user.UserLoginRequest;
-import com.aitest.springbootinit.model.dto.user.UserQueryRequest;
-import com.aitest.springbootinit.model.dto.user.UserRegisterRequest;
-import com.aitest.springbootinit.model.dto.user.UserUpdateMyRequest;
-import com.aitest.springbootinit.model.dto.user.UserUpdateRequest;
+import com.aitest.springbootinit.constant.UserConstant;
+import com.aitest.springbootinit.exception.BusinessException;
+import com.aitest.springbootinit.exception.ThrowUtils;
+import com.aitest.springbootinit.model.dto.user.*;
 import com.aitest.springbootinit.model.entity.User;
 import com.aitest.springbootinit.model.vo.LoginUserVO;
 import com.aitest.springbootinit.model.vo.UserVO;
 import com.aitest.springbootinit.service.UserService;
-
-import java.util.List;
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.util.DigestUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 import static com.aitest.springbootinit.service.impl.UserServiceImpl.SALT;
 

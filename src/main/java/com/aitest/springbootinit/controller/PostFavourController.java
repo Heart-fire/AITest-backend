@@ -1,11 +1,10 @@
 package com.aitest.springbootinit.controller;
 
-import com.aitest.springbootinit.exception.BusinessException;
-import com.aitest.springbootinit.exception.ThrowUtils;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.aitest.springbootinit.common.BaseResponse;
 import com.aitest.springbootinit.common.ErrorCode;
 import com.aitest.springbootinit.common.ResultUtils;
+import com.aitest.springbootinit.exception.BusinessException;
+import com.aitest.springbootinit.exception.ThrowUtils;
 import com.aitest.springbootinit.model.dto.post.PostQueryRequest;
 import com.aitest.springbootinit.model.dto.postfavour.PostFavourAddRequest;
 import com.aitest.springbootinit.model.dto.postfavour.PostFavourQueryRequest;
@@ -15,13 +14,15 @@ import com.aitest.springbootinit.model.vo.PostVO;
 import com.aitest.springbootinit.service.PostFavourService;
 import com.aitest.springbootinit.service.PostService;
 import com.aitest.springbootinit.service.UserService;
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * 帖子收藏接口

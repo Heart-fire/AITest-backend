@@ -1,20 +1,21 @@
 package com.aitest.springbootinit.controller;
 
-import com.aitest.springbootinit.exception.BusinessException;
 import com.aitest.springbootinit.common.BaseResponse;
 import com.aitest.springbootinit.common.ErrorCode;
 import com.aitest.springbootinit.common.ResultUtils;
+import com.aitest.springbootinit.exception.BusinessException;
 import com.aitest.springbootinit.model.dto.postthumb.PostThumbAddRequest;
 import com.aitest.springbootinit.model.entity.User;
 import com.aitest.springbootinit.service.PostThumbService;
 import com.aitest.springbootinit.service.UserService;
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * 帖子点赞接口

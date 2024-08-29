@@ -7,9 +7,7 @@ import org.apache.commons.lang3.ObjectUtils;
 
 /**
  * 文件上传业务类型枚举
- *
- * 
- * @from 
+ * @from
  */
 public enum FileUploadBizEnum {
 
@@ -50,7 +48,7 @@ public enum FileUploadBizEnum {
         }
         return null;
     }
-
+    // 枚举值没有Set方法
     public String getValue() {
         return value;
     }
