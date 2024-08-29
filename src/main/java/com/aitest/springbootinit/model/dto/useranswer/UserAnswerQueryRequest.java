@@ -1,14 +1,10 @@
 package com.aitest.springbootinit.model.dto.useranswer;
 
 import com.aitest.springbootinit.common.PageRequest;
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
-import java.util.Date;
-import java.util.List;
 
 /**
  * 查询用户答题表请求

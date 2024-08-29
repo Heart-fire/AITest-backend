@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * 题目表接口
@@ -56,7 +57,7 @@ public class QuestionController {
         Question question = new Question();
         BeanUtils.copyProperties(questionAddRequest, question);
         // 创建应用时将题目内容以JSON数据存储数据库
-        QuestionContentDTO questionContentDTO = questionAddRequest.getQuestionContent();
+        List<QuestionContentDTO> questionContentDTO = questionAddRequest.getQuestionContent();
         question.setQuestionContent(JSONUtil.toJsonStr(questionContentDTO));
         // 数据校验
         questionService.validQuestion(question, true);
@@ -114,7 +115,7 @@ public class QuestionController {
         Question question = new Question();
         BeanUtils.copyProperties(questionUpdateRequest, question);
         // 创建应用时将题目内容以JSON数据存储数据库
-        QuestionContentDTO questionContentDTO = questionUpdateRequest.getQuestionContent();
+        List<QuestionContentDTO> questionContentDTO = questionUpdateRequest.getQuestionContent();
         question.setQuestionContent(JSONUtil.toJsonStr(questionContentDTO));
         // 数据校验
         questionService.validQuestion(question, false);
@@ -130,7 +131,7 @@ public class QuestionController {
 
     /**
      * 根据 id 获取题目表（封装类）
-     *
+     * 题目不是单一一个，是数组形式
      * @param id
      * @return
      */
@@ -223,7 +224,7 @@ public class QuestionController {
         Question question = new Question();
         BeanUtils.copyProperties(questionEditRequest, question);
         // 创建应用时将题目内容以JSON数据存储数据库
-        QuestionContentDTO questionContentDTO = questionEditRequest.getQuestionContent();
+        List<QuestionContentDTO> questionContentDTO = questionEditRequest.getQuestionContent();
         question.setQuestionContent(JSONUtil.toJsonStr(questionContentDTO));
         // 数据校验
         questionService.validQuestion(question, false);

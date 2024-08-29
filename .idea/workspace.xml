@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04beef71-3c16-4f62-80dd-24413521ac67" name="Changes" comment="@完善评分模块的增删改查和优化校验逻辑">
+    <list default="true" id="04beef71-3c16-4f62-80dd-24413521ac67" name="Changes" comment="@完善回答模块的增删改查(仅管理员可用)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/UserAnswerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/UserAnswerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/QuestionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/question/QuestionAddRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/question/QuestionAddRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/question/QuestionEditRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/question/QuestionEditRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/question/QuestionUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/question/QuestionUpdateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/useranswer/UserAnswerAddRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/useranswer/UserAnswerAddRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/useranswer/UserAnswerQueryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/useranswer/UserAnswerQueryRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/vo/QuestionVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/vo/QuestionVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/service/UserAnswerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/service/UserAnswerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/service/impl/UserAnswerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/service/impl/UserAnswerServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +156,7 @@
       <workItem from="1724825869208" duration="1094000" />
       <workItem from="1724826977184" duration="903000" />
       <workItem from="1724827889437" duration="19230000" />
-      <workItem from="1724890404078" duration="15077000" />
+      <workItem from="1724890404078" duration="15684000" />
     </task>
     <task id="LOCAL-00001" summary="@生成数据访问层和业务逻辑代码&amp;&amp;接口和服务开发&amp;&amp;完善用户和应用模块">
       <option name="closed" value="true" />
@@ -179,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724901532926</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="@完善回答模块的增删改查(仅管理员可用)">
+      <option name="closed" value="true" />
+      <created>1724927866910</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1724927866910</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +212,7 @@
     <MESSAGE value="@生成数据访问层和业务逻辑代码&amp;&amp;接口和服务开发&amp;&amp;完善用户和应用模块" />
     <MESSAGE value="@完善题目模块的增删改查" />
     <MESSAGE value="@完善评分模块的增删改查和优化校验逻辑" />
-    <option name="LAST_COMMIT_MESSAGE" value="@完善评分模块的增删改查和优化校验逻辑" />
+    <MESSAGE value="@完善回答模块的增删改查(仅管理员可用)" />
+    <option name="LAST_COMMIT_MESSAGE" value="@完善回答模块的增删改查(仅管理员可用)" />
   </component>
 </project>
