@@ -4,78 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04beef71-3c16-4f62-80dd-24413521ac67" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/AppController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/QuestionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/ScoringResultController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/UserAnswerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/mapper/AppMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/mapper/QuestionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/mapper/ScoringResultMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/mapper/UserAnswerMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/app/AppAddRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/app/AppEditRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/app/AppQueryRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/app/AppUpdateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/question/QuestionAddRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/question/QuestionContentDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/question/QuestionEditRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/question/QuestionQueryRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/question/QuestionUpdateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/scoringresult/ScoringResultAddRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/scoringresult/ScoringResultEditRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/scoringresult/ScoringResultQueryRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/scoringresult/ScoringResultUpdateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/useranswer/UserAnswerAddRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/useranswer/UserAnswerEditRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/useranswer/UserAnswerQueryRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/useranswer/UserAnswerUpdateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/entity/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/entity/Question.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/entity/ScoringResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/entity/UserAnswer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/enums/AppScoringStrategyEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/enums/AppTypeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/enums/ReviewStatusEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/vo/AppVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/vo/QuestionVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/vo/ScoringResultVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/vo/UserAnswerVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/service/AppService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/service/QuestionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/service/ScoringResultService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/service/UserAnswerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/service/impl/AppServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/service/impl/QuestionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/service/impl/ScoringResultServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/service/impl/UserAnswerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/AppMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/QuestionMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ScoringResultMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserAnswerMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/12536950-906e-4d22-8088-449400c03dae.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/12536950-906e-4d22-8088-449400c03dae.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/12536950-906e-4d22-8088-449400c03dae/storage_v2/_src_/schema/sys.zb4BAA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/12536950-906e-4d22-8088-449400c03dae/storage_v2/_src_/schema/sys.zb4BAA.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a36c6f75-ac11-4892-9084-7f5bb83b88c1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a36c6f75-ac11-4892-9084-7f5bb83b88c1.xml" afterDir="false" />
+    <list default="true" id="04beef71-3c16-4f62-80dd-24413521ac67" name="Changes" comment="@生成数据访问层和业务逻辑代码&amp;&amp;接口和服务开发&amp;&amp;完善用户和应用模块">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/PostFavourController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/PostFavourController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/PostThumbController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/PostThumbController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/generate/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/generate/CodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/enums/FileUploadBizEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/enums/FileUploadBizEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/TemplateController.java.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/TemplateController.java.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/TemplateService.java.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/TemplateService.java.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/TemplateServiceImpl.java.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/TemplateServiceImpl.java.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/model/TemplateAddRequest.java.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/model/TemplateAddRequest.java.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/model/TemplateEditRequest.java.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/model/TemplateEditRequest.java.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/model/TemplateQueryRequest.java.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/model/TemplateQueryRequest.java.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/model/TemplateUpdateRequest.java.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/model/TemplateUpdateRequest.java.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/model/TemplateVO.java.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/model/TemplateVO.java.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/QuestionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/service/impl/QuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/service/impl/QuestionServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,8 +151,17 @@
       <workItem from="1724825869208" duration="1094000" />
       <workItem from="1724826977184" duration="903000" />
       <workItem from="1724827889437" duration="19230000" />
-      <workItem from="1724890404078" duration="2957000" />
+      <workItem from="1724890404078" duration="6006000" />
     </task>
+    <task id="LOCAL-00001" summary="@生成数据访问层和业务逻辑代码&amp;&amp;接口和服务开发&amp;&amp;完善用户和应用模块">
+      <option name="closed" value="true" />
+      <created>1724893649217</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1724893649217</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,5 +180,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="@生成数据访问层和业务逻辑代码&amp;&amp;接口和服务开发&amp;&amp;完善用户和应用模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="@生成数据访问层和业务逻辑代码&amp;&amp;接口和服务开发&amp;&amp;完善用户和应用模块" />
   </component>
 </project>
