@@ -77,6 +77,7 @@ public class UserAnswerController {
         Long appId = userAnswerAddRequest.getAppId();
         App app = appService.getById(appId);
         ThrowUtils.throwIf(app == null, ErrorCode.NOT_FOUND_ERROR);
+        // 应用未通过审核，无法进行答题
         if (!ReviewStatusEnum.PASS.equals(ReviewStatusEnum.getEnumByValue(app.getReviewStatus()))) {
             throw new BusinessException(ErrorCode.NO_AUTH_ERROR, "应用未通过审核，无法答题");
         }

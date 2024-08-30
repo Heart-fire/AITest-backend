@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85480b22-1f1e-4d32-a3df-78ea8fdd8aad" name="Changes" comment="@针对不同的应用类别和评分策略，编写不同的实现逻辑">
+    <list default="true" id="85480b22-1f1e-4d32-a3df-78ea8fdd8aad" name="Changes" comment="@在创建用户答题方法中补充[调用评分模块并更新答题表]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/UserAnswerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/UserAnswerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/service/impl/QuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/service/impl/QuestionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/service/impl/UserAnswerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/service/impl/UserAnswerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/AppController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +55,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724987605841</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="@在创建用户答题方法中补充[调用评分模块并更新答题表]">
+      <option name="closed" value="true" />
+      <created>1724994411977</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1724994411977</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -74,6 +80,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="@增加应用审核功能" />
     <MESSAGE value="@针对不同的应用类别和评分策略，编写不同的实现逻辑" />
-    <option name="LAST_COMMIT_MESSAGE" value="@针对不同的应用类别和评分策略，编写不同的实现逻辑" />
+    <MESSAGE value="@在创建用户答题方法中补充[调用评分模块并更新答题表]" />
+    <option name="LAST_COMMIT_MESSAGE" value="@在创建用户答题方法中补充[调用评分模块并更新答题表]" />
   </component>
 </project>
