@@ -61,13 +61,13 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question> i
         // add用来校验当前操作是创建还是更新，
         // 创建数据时，参数不能为空
         if (add) {
-            // todo 补充校验规则
+            // 补充校验规则
             ThrowUtils.throwIf(StringUtils.isBlank(questionContent), ErrorCode.PARAMS_ERROR,"创建题目内容不能为空");
-            ThrowUtils.throwIf(appId == null || appId < 0,ErrorCode.PARAMS_ERROR,"应用ID非法");
+            ThrowUtils.throwIf(appId == null || appId <= 0,ErrorCode.PARAMS_ERROR,"应用ID非法");
         }
         // 修改数据时，有参数则校验
         // 无论创建还是更新都需要判断应用是否存在
-        // todo 补充校验规则
+        // 补充校验规则
         if (appId != null) {
             //去数据库里查一下，看看这个数字到底有没有对应的应用存在。
             App app = appService.getById(appId);
