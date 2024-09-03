@@ -75,3 +75,6 @@ knife4j:
         api-rule: package
         api-rule-resources:
           - com.aitest.springbootinit.controller
+ai:
+  apiKey: 98ee8b5159f7c65ea53dba7a0c88e2d9.0PuEnWnUPjgv5qMm
+
