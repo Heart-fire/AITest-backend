@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85480b22-1f1e-4d32-a3df-78ea8fdd8aad" name="Changes" comment="@在创建用户答题方法中补充[调用评分模块并更新答题表]">
+    <list default="true" id="b0ea5046-b15b-4a87-a2f4-d1fe94970b1d" name="Changes" comment="@Heart-fire@接入AI模块并封装">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/question/AiGenerateQuestionRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/AppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/QuestionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/manager/AiManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/manager/AiManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/scoring/KeyConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/aitest/springbootinit/ZhiPuAITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/aitest/springbootinit/ZhiPuAITest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,10 +24,6 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectViewState">
-    <option name="sortByType" value="true" />
-    <option name="sortKey" value="BY_TYPE" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
@@ -37,50 +39,53 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RunManager">
-    <configuration name="MainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="MainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="AITest-backend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.aitest.springbootinit.MainApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.aitest.springbootinit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.MainApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="TaskManager">
-    <task id="LOCAL-00001" summary="@针对不同的应用类别和评分策略，编写不同的实现逻辑">
+    <task id="LOCAL-00001" summary="@Heart-fire@接入AI模块并封装">
       <option name="closed" value="true" />
-      <created>1724987605841</created>
+      <created>1725330665824</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1724987605841</updated>
+      <updated>1725330665824</updated>
     </task>
-    <task id="LOCAL-00002" summary="@在创建用户答题方法中补充[调用评分模块并更新答题表]">
-      <option name="closed" value="true" />
-      <created>1724994411977</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1724994411977</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="@增加应用审核功能" />
-    <MESSAGE value="@针对不同的应用类别和评分策略，编写不同的实现逻辑" />
-    <MESSAGE value="@在创建用户答题方法中补充[调用评分模块并更新答题表]" />
-    <option name="LAST_COMMIT_MESSAGE" value="@在创建用户答题方法中补充[调用评分模块并更新答题表]" />
+    <MESSAGE value="@接入AI模块并封装" />
+    <MESSAGE value="@Heart-fire@接入AI模块并封装" />
+    <option name="LAST_COMMIT_MESSAGE" value="@Heart-fire@接入AI模块并封装" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.zhipu.oapi.service.v4.model.ModelApiResponse" memberName="code" />
+        <PinnedItemInfo parentTag="com.zhipu.oapi.service.v4.model.ModelApiResponse" memberName="success" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

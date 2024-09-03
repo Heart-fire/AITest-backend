@@ -1,5 +1,6 @@
 package com.aitest.springbootinit;
 
+import com.aitest.springbootinit.config.AiConfig;
 import com.zhipu.oapi.ClientV4;
 import com.zhipu.oapi.Constants;
 import com.zhipu.oapi.service.v4.model.ChatCompletionRequest;
@@ -17,6 +18,7 @@ public class ZhiPuAITest {
 
     @Resource
     private ClientV4 clientV4;
+
     @Test
     public void test(){
 //        ClientV4 client = new ClientV4.Builder(KEY).build();
