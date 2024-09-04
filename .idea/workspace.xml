@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0ea5046-b15b-4a87-a2f4-d1fe94970b1d" name="Changes" comment="@优化AI评分的响应时间提升效率">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/config/RedissonConfig.java" afterDir="false" />
+    <list default="true" id="b0ea5046-b15b-4a87-a2f4-d1fe94970b1d" name="Changes" comment="@添加分布式锁避免多个请求同时调用AI服务🔥">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/aitest/springbootinit/UserAnswerShardingTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/scoring/AiTestScoringStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/scoring/AiTestScoringStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/UserAnswerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/UserAnswerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +48,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.RxJava.rxJavaDemo.executor": "Debug",
+    "JUnit.UserAnswerShardingTest.test.executor": "Debug",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -88,9 +89,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserAnswerShardingTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AITest-backend" />
+      <shortenClasspath name="MANIFEST" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.aitest.springbootinit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.aitest.springbootinit" />
+      <option name="MAIN_CLASS_NAME" value="com.aitest.springbootinit.UserAnswerShardingTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="AITest-backend" />
+      <option name="SHORTEN_COMMAND_LINE" value="MANIFEST" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.aitest.springbootinit.MainApplication" />
       <extension name="coverage">
         <pattern>
@@ -102,8 +121,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.UserAnswerShardingTest.test" />
+      <item itemvalue="JUnit.RxJava.rxJavaDemo" />
+      <item itemvalue="Spring Boot.MainApplication" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserAnswerShardingTest.test" />
         <item itemvalue="Spring Boot.MainApplication" />
         <item itemvalue="JUnit.RxJava.rxJavaDemo" />
       </list>
@@ -133,7 +158,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1725410052042</updated>
-      <workItem from="1725410054287" duration="16296000" />
+      <workItem from="1725410054287" duration="20235000" />
     </task>
     <task id="LOCAL-00003" summary="@基于RxJava实时获取智谱AI的数据以SSE方式响应前端">
       <option name="closed" value="true" />
@@ -151,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725441818803</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="@添加分布式锁避免多个请求同时调用AI服务🔥">
+      <option name="closed" value="true" />
+      <created>1725448380465</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1725448380465</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,7 +207,8 @@
     <MESSAGE value="@Heart-fire@使用AI自动生成题目" />
     <MESSAGE value="@基于RxJava实时获取智谱AI的数据以SSE方式响应前端" />
     <MESSAGE value="@优化AI评分的响应时间提升效率" />
-    <option name="LAST_COMMIT_MESSAGE" value="@优化AI评分的响应时间提升效率" />
+    <MESSAGE value="@添加分布式锁避免多个请求同时调用AI服务" />
+    <option name="LAST_COMMIT_MESSAGE" value="@添加分布式锁避免多个请求同时调用AI服务" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
