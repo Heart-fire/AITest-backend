@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0ea5046-b15b-4a87-a2f4-d1fe94970b1d" name="Changes" comment="@Heart-fire@使用AI自动生成题目🤖">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/model/dto/question/QuestionAnswerDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/scoring/AiTestScoringStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/aitest/springbootinit/utils/RxJava.java" afterDir="false" />
+    <list default="true" id="b0ea5046-b15b-4a87-a2f4-d1fe94970b1d" name="Changes" comment="@基于RxJava实时获取智谱AI的数据以SSE方式响应前端">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/QuestionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/manager/AiManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/manager/AiManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/scoring/AiTestScoringStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/scoring/AiTestScoringStrategy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,9 +126,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1725410052042</updated>
-      <workItem from="1725410054287" duration="7597000" />
+      <workItem from="1725410054287" duration="12271000" />
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="@基于RxJava实时获取智谱AI的数据以SSE方式响应前端">
+      <option name="closed" value="true" />
+      <created>1725433724857</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1725433724857</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,7 +157,8 @@
     <MESSAGE value="@接入AI模块并封装" />
     <MESSAGE value="@Heart-fire@接入AI模块并封装" />
     <MESSAGE value="@Heart-fire@使用AI自动生成题目" />
-    <option name="LAST_COMMIT_MESSAGE" value="@Heart-fire@使用AI自动生成题目" />
+    <MESSAGE value="@基于RxJava实时获取智谱AI的数据以SSE方式响应前端" />
+    <option name="LAST_COMMIT_MESSAGE" value="@基于RxJava实时获取智谱AI的数据以SSE方式响应前端" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
