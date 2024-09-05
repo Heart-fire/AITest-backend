@@ -1,5 +1,6 @@
 package com.aitest.springbootinit.controller;
 
+import cn.hutool.core.util.IdUtil;
 import cn.hutool.json.JSONUtil;
 import com.aitest.springbootinit.annotation.AuthCheck;
 import com.aitest.springbootinit.common.BaseResponse;
@@ -277,4 +278,10 @@ public class UserAnswerController {
     }
 
     // endregion
+
+    @GetMapping("/generate/id")
+    public BaseResponse<Long> generateUserAnswerId() {
+        return ResultUtils.success(IdUtil.getSnowflakeNextId());
+    }
+
 }
