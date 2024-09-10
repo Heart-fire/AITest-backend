@@ -11,9 +11,6 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.sun.org.apache.xml.internal.serializer.utils.Utils.messages;
-
 /**
  * 通用 AI 调用能力
  */

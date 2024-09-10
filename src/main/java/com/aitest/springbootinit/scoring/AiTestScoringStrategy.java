@@ -31,10 +31,10 @@ public class AiTestScoringStrategy implements ScoringStrategy {
     @Resource
     private AiManager aiManager;
 
-    @Resource
-    private RedissonClient redissonClient;
+//    @Resource
+//    private RedissonClient redissonClient;
 
-    private static final String AI_ANSWER_LOCK = "AI_ANSWER_LOCK";
+//    private static final String AI_ANSWER_LOCK = "AI_ANSWER_LOCK";
 
 
     // 创建本地缓存,只限于在这个功能内，让AI秒答-{初始容量、过期策略、最大容量}
@@ -102,15 +102,15 @@ public class AiTestScoringStrategy implements ScoringStrategy {
         }
         // 定义锁
         // 可以避免多个请求同时调用 AI 服务
-        RLock lock = redissonClient.getLock(AI_ANSWER_LOCK + cacheKey);
+//        RLock lock = redissonClient.getLock(AI_ANSWER_LOCK + cacheKey);
 
-        try {
-            // 竞争分布式锁，等待3秒，15秒自动释放
-            boolean res = lock.tryLock(3, 15, TimeUnit.SECONDS);
-            if (!res){
-                // 只有抢到锁的业务才能执行 AI 调用
-                return null;
-            }
+//        try {
+//            // 竞争分布式锁，等待3秒，15秒自动释放
+//            boolean res = lock.tryLock(3, 15, TimeUnit.SECONDS);
+//            if (!res){
+//                // 只有抢到锁的业务才能执行 AI 调用
+//                return null;
+//            }
             // 1. 根据 id 查询到题目
             Question question = questionService.getOne(
                     Wrappers.lambdaQuery(Question.class).eq(Question::getAppId, appId)
@@ -137,15 +137,16 @@ public class AiTestScoringStrategy implements ScoringStrategy {
             userAnswer.setScoringStrategy(app.getScoringStrategy());
             userAnswer.setChoices(JSONUtil.toJsonStr(choices));
             return userAnswer;
-        } finally {
-            // 锁不为空且必须是被锁状态，必须本人释放
-            if (lock != null && lock.isLocked()){
-                // 判断锁 是否 是当前线程的
-                if (lock.isHeldByCurrentThread()){
-                    lock.unlock();
-                }
-            }
-        }
+//        }
+//        finally {
+//            // 锁不为空且必须是被锁状态，必须本人释放
+//            if (lock != null && lock.isLocked()){
+//                // 判断锁 是否 是当前线程的
+//                if (lock.isHeldByCurrentThread()){
+//                    lock.unlock();
+//                }
+//            }
+//        }
     }
 
     /**
