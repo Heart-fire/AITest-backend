@@ -50,7 +50,6 @@ public class CustomScoreScoringStrategy implements ScoringStrategy {
         int totalScore = 0;
         QuestionVO questionVO = QuestionVO.objToVo(question);
         List<QuestionContentDTO> questionContent = questionVO.getQuestionContent();
-
         // 遍历题目列表,题目类型为[QuestionContentDTO]类型
         for (QuestionContentDTO questionContentDTO : questionContent) {
             // 遍历答案列表

@@ -14,9 +14,6 @@ import com.aitest.springbootinit.service.QuestionService;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
-import org.checkerframework.checker.nullness.qual.NonNull;
-import org.redisson.api.RLock;
-import org.redisson.api.RedissonClient;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;

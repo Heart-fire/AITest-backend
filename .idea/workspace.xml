@@ -4,17 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0ea5046-b15b-4a87-a2f4-d1fe94970b1d" name="Changes" comment="@实现热门应用排行和应用回答分布两块内容的统计">
+    <list default="true" id="b0ea5046-b15b-4a87-a2f4-d1fe94970b1d" name="Changes" comment="@修复上线问题">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/config/WebMvcConfg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/aitest/springbootinit/QuickSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/aitest/springbootinit/WanWuXinXuan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/12536950-906e-4d22-8088-449400c03dae.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/12536950-906e-4d22-8088-449400c03dae.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/config/RedissonConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/config/RedissonConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/manager/AiManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/manager/AiManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/annotation/AuthCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/annotation/AuthCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/QuestionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/scoring/AiTestScoringStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/scoring/AiTestScoringStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/scoring/CustomScoreScoringStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/scoring/CustomScoreScoringStrategy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +63,9 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.QuickSort.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Solution.executor&quot;: &quot;Run&quot;,
+    &quot;Application.WanWuXinXuan.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.RxJava.rxJavaDemo.executor&quot;: &quot;Debug&quot;,
     &quot;JUnit.UserAnswerShardingTest.test.executor&quot;: &quot;Debug&quot;,
     &quot;Maven.AITest-backend [clean].executor&quot;: &quot;Run&quot;,
@@ -77,6 +80,7 @@
     &quot;database.data.extractors.current.export.id&quot;: &quot;JSON-Groovy.json.groovy&quot;,
     &quot;database.data.extractors.current.id&quot;: &quot;JSON-Groovy.json.groovy&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IDEA-project/yupao-backend&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
@@ -96,7 +100,41 @@
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
-  <component name="RunManager" selected="Spring Boot.MainApplication">
+  <component name="RunManager" selected="Application.WanWuXinXuan">
+    <configuration name="QuickSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.aitest.springbootinit.QuickSort" />
+      <module name="AITest-backend" />
+      <shortenClasspath name="MANIFEST" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.aitest.springbootinit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WanWuXinXuan" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.aitest.springbootinit.WanWuXinXuan" />
+      <module name="AITest-backend" />
+      <shortenClasspath name="MANIFEST" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.aitest.springbootinit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <shortenClasspath name="MANIFEST" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RxJava.rxJavaDemo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AITest-backend" />
       <extension name="coverage">
@@ -146,12 +184,16 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.QuickSort" />
+      <item itemvalue="Application.WanWuXinXuan" />
       <item itemvalue="JUnit.UserAnswerShardingTest.test" />
       <item itemvalue="JUnit.RxJava.rxJavaDemo" />
       <item itemvalue="Spring Boot.MainApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WanWuXinXuan" />
+        <item itemvalue="Application.QuickSort" />
         <item itemvalue="Spring Boot.MainApplication" />
         <item itemvalue="JUnit.UserAnswerShardingTest.test" />
         <item itemvalue="JUnit.RxJava.rxJavaDemo" />
@@ -194,7 +236,17 @@
       <workItem from="1725546261200" duration="5709000" />
       <workItem from="1725580946896" duration="14705000" />
       <workItem from="1725612896627" duration="8327000" />
-      <workItem from="1725973460510" duration="316000" />
+      <workItem from="1725973460510" duration="3322000" />
+      <workItem from="1726014255933" duration="2014000" />
+      <workItem from="1726037635170" duration="139000" />
+      <workItem from="1726037793618" duration="6120000" />
+      <workItem from="1726107154954" duration="5287000" />
+      <workItem from="1726186818900" duration="6842000" />
+      <workItem from="1726236272455" duration="46000" />
+      <workItem from="1726282905162" duration="711000" />
+      <workItem from="1726621463246" duration="4457000" />
+      <workItem from="1726728378656" duration="8185000" />
+      <workItem from="1726892472738" duration="10962000" />
     </task>
     <task id="LOCAL-00003" summary="@基于RxJava实时获取智谱AI的数据以SSE方式响应前端">
       <option name="closed" value="true" />
@@ -244,7 +296,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725536310458</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="@修复上线问题">
+      <option name="closed" value="true" />
+      <created>1725974232578</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1725974232578</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,7 +331,8 @@
     <MESSAGE value="@用ShardingJDBC[分表]优化单表查询性能" />
     <MESSAGE value="@复用主键方案实现幂等性" />
     <MESSAGE value="@实现热门应用排行和应用回答分布两块内容的统计" />
-    <option name="LAST_COMMIT_MESSAGE" value="@实现热门应用排行和应用回答分布两块内容的统计" />
+    <MESSAGE value="@修复上线问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="@修复上线问题" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

@@ -337,17 +337,17 @@ public class QuestionController {
         AtomicInteger flag = new AtomicInteger(0);
         modelDataFlowable
                 // 异步线程池执行
-                .observeOn(Schedulers.io())
-                .map(chunk -> chunk.getChoices().get(0).getDelta().getContent())
-                .map(message -> message.replaceAll("\\s", ""))
-                .filter(StrUtil::isNotBlank)
+                .observeOn(Schedulers.io()) // 将数据处理的任务切换到异步线程池中，提高效率
+                .map(chunk -> chunk.getChoices().get(0).getDelta().getContent())// 从流式返回的数据中提取内容
+                .map(message -> message.replaceAll("\\s", "")) // 删除文本中空白字符或换行符
+                .filter(StrUtil::isNotBlank) // 过滤空字符
                 .flatMap(message -> {
                     // 将字符串转换为 List<Character>
-                    List<Character> charList = new ArrayList<>();
+                    List<Character> charList = new ArrayList<>();  //将字符传转换为字符列表
                     for (char c : message.toCharArray()) {
                         charList.add(c);
                     }
-                    return Flowable.fromIterable(charList);
+                    return Flowable.fromIterable(charList); //将字符列表转换为Flowable流，便于后续对每个字符逐个处理
                 })
                 .doOnNext(c -> {
                     {
