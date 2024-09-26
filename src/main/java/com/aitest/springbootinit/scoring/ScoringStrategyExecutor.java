@@ -29,6 +29,7 @@ public class ScoringStrategyExecutor {
      * @throws Exception
      */
     public UserAnswer doScore(List<String> choiceList, App app) throws Exception {
+        // 拿到应用类型判空
         Integer appType = app.getAppType();
         Integer appScoringStrategy = app.getScoringStrategy();
         if (appType == null || appScoringStrategy == null) {

@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0ea5046-b15b-4a87-a2f4-d1fe94970b1d" name="Changes" comment="@修复上线问题">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/config/WebMvcConfg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/aitest/springbootinit/QuickSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/aitest/springbootinit/WanWuXinXuan.java" afterDir="false" />
+    <list default="true" id="b0ea5046-b15b-4a87-a2f4-d1fe94970b1d" name="Changes" comment="@代码进行调整">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/12536950-906e-4d22-8088-449400c03dae.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/12536950-906e-4d22-8088-449400c03dae.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/annotation/AuthCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/annotation/AuthCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/AppStatisticController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/AppStatisticController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/controller/QuestionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/scoring/AiTestScoringStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/scoring/AiTestScoringStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/scoring/CustomScoreScoringStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/scoring/CustomScoreScoringStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/scoring/ScoringStrategyExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aitest/springbootinit/scoring/ScoringStrategyExecutor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,7 +241,11 @@
       <workItem from="1726282905162" duration="711000" />
       <workItem from="1726621463246" duration="4457000" />
       <workItem from="1726728378656" duration="8185000" />
-      <workItem from="1726892472738" duration="10962000" />
+      <workItem from="1726892472738" duration="12388000" />
+      <workItem from="1726989132858" duration="6084000" />
+      <workItem from="1727050912972" duration="3084000" />
+      <workItem from="1727145683397" duration="1669000" />
+      <workItem from="1727235600970" duration="970000" />
     </task>
     <task id="LOCAL-00003" summary="@基于RxJava实时获取智谱AI的数据以SSE方式响应前端">
       <option name="closed" value="true" />
@@ -304,7 +303,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725974232578</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="@代码进行调整">
+      <option name="closed" value="true" />
+      <created>1726925093585</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1726925093585</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +339,8 @@
     <MESSAGE value="@复用主键方案实现幂等性" />
     <MESSAGE value="@实现热门应用排行和应用回答分布两块内容的统计" />
     <MESSAGE value="@修复上线问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="@修复上线问题" />
+    <MESSAGE value="@代码进行调整" />
+    <option name="LAST_COMMIT_MESSAGE" value="@代码进行调整" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

@@ -33,6 +33,11 @@ public class AppStatisticController {
         return ResultUtils.success(userAnswerMapper.doAppAnswerCount());
     }
 
+    /**
+     * 热门应用结果统计
+     * @param appId
+     * @return
+     */
     @GetMapping("/answer_result_count")
     public BaseResponse<List<AppAnswerResultCountDTO>> getAppAnswerResultCount(Long appId) {
         ThrowUtils.throwIf(appId == null || appId <= 0, ErrorCode.PARAMS_ERROR);

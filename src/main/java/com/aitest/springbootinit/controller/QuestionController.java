@@ -349,7 +349,7 @@ public class QuestionController {
                     }
                     return Flowable.fromIterable(charList); //将字符列表转换为Flowable流，便于后续对每个字符逐个处理
                 })
-                .doOnNext(c -> {
+                .doOnNext(c -> { //每生成一次，就出发一次OnNext的方法
                     {
                         // 识别第一个 [ 表示开始 AI 传输 json 数据，打开 flag 开始拼接 json 数组
                         if (c == '{') {
