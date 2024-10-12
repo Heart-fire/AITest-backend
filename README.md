@@ -3,6 +3,7 @@
 ### 慧解AI视觉享受区
 
 #### 线上地址：[慧解AI平台](http://118.25.26.219/)
+#### 前端源码地址：[慧解AI前端源码](https://github.com/Heart-fire/aitest-frontend)
 
 ##### 首页展示：
 
