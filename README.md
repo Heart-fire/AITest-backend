@@ -1,12 +1,43 @@
-# SpringBoot 项目初始模板
+
+
+### 慧解AI视觉享受区
+
+#### 线上地址：[慧解AI平台](http://118.25.26.219/)
+
+##### 首页展示：
+
+![](https://xinhuo-store.oss-cn-hangzhou.aliyuncs.com/AI%E7%AD%94%E9%A2%98%E5%9B%BE%E7%89%87%E5%BA%93/%E9%A6%96%E9%A1%B5.jpg)
+
+##### 基于Coze 单Agent的生活助理：
+
+------
+
+![](https://xinhuo-store.oss-cn-hangzhou.aliyuncs.com/AI%E7%AD%94%E9%A2%98%E5%9B%BE%E7%89%87%E5%BA%93/AI%E9%A6%96%E9%A1%B5.jpg)
+
+##### 基于Dify自建知识库的面试题小助理：
+
+![](https://xinhuo-store.oss-cn-hangzhou.aliyuncs.com/AI%E7%AD%94%E9%A2%98%E5%9B%BE%E7%89%87%E5%BA%93/AI%E5%8A%A9%E7%90%86.jpg)
+
+##### 登录页：
+
+![](https://xinhuo-store.oss-cn-hangzhou.aliyuncs.com/AI%E7%AD%94%E9%A2%98%E5%9B%BE%E7%89%87%E5%BA%93/%E7%99%BB%E5%BD%95%E9%A1%B5.jpg)
+
+##### 答题记录：
+
+![](https://xinhuo-store.oss-cn-hangzhou.aliyuncs.com/AI%E7%AD%94%E9%A2%98%E5%9B%BE%E7%89%87%E5%BA%93/%E7%99%BB%E5%BD%95%E5%90%8E%E9%A1%B5%E9%9D%A2.jpg)
+
+
+
+#### 扩展：SpringBoot 项目初始模板
+
 基于 Java SpringBoot 的项目初始模板，整合了常用框架和主流业务的示例代码。
 
 只需 1 分钟即可完成内容网站的后端！！！
 
 
-## 模板特点
+#### 模板特点：
 
-### 主流框架 & 特性
+##### 主流框架 & 特性
 
 - Spring Boot 2.7.x（贼新）
 - Spring MVC
@@ -16,21 +47,21 @@
 - Spring Scheduler 定时任务
 - Spring 事务注解
 
-### 数据存储
+#### 数据存储
 
 - MySQL 数据库
 - Redis 内存数据库
 - Elasticsearch 搜索引擎
 - 腾讯云 COS 对象存储
 
-### 工具类
+#### 工具类
 
 - Easy Excel 表格处理
 - Hutool 工具库
 - Apache Commons Lang3 工具类
 - Lombok 注解
 
-### 业务特性
+##### 业务特性
 
 - 业务代码生成器（支持自动生成 Service、Controller、数据模型代码）
 - Spring Session Redis 分布式登录
@@ -45,7 +76,7 @@
 - 多环境配置
 
 
-## 业务功能
+##### 业务功能
 
 - 提供示例 SQL（用户、帖子、帖子点赞、帖子收藏表）
 - 用户登录、注册、注销、更新、检索、权限管理
@@ -57,20 +88,20 @@
 - 支持微信公众号订阅、收发消息、设置菜单
 - 支持分业务的文件上传
 
-### 单元测试
+##### 单元测试
 
 - JUnit5 单元测试
 - 示例单元测试类
 
-### 架构设计
+##### 架构设计
 
 - 合理分层
 
 
-## 快速上手
+##### 快速上手
 
 
-### MySQL 数据库
+##### MySQL 数据库
 
 1）修改 `application.yml` 的数据库配置为你自己的：
 
@@ -89,7 +120,7 @@ spring:
 
 ![](doc/swagger.png)
 
-### Redis 分布式登录
+##### Redis 分布式登录
 
 1）修改 `application.yml` 的 Redis 配置为你自己的：
 
@@ -126,7 +157,7 @@ spring:
 @SpringBootApplication
 ```
 
-### Elasticsearch 搜索引擎
+##### Elasticsearch 搜索引擎
 
 1）修改 `application.yml` 的 Elasticsearch 配置为你自己的：
 
@@ -158,7 +189,7 @@ PUT post_v1
 //@Component
 ```
 
-### 业务代码生成器
+##### 业务代码生成器
 
 支持自动生成 Service、Controller、数据模型代码，配合 MyBatisX 插件，可以快速开发增删改查等实用基础功能。
 
