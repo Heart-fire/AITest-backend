@@ -28,6 +28,9 @@ public class AiTestScoringStrategy implements ScoringStrategy {
     @Resource
     private AiManager aiManager;
 
+    // 结果图标
+    String aaa = "https://xinhuo-store.oss-cn-hangzhou.aliyuncs.com/AI%E7%AD%94%E9%A2%98%E5%9B%BE%E7%89%87%E5%BA%93/%E6%B5%81%E7%A8%8B3.png";
+
 //    @Resource
 //    private RedissonClient redissonClient;
 
@@ -108,32 +111,34 @@ public class AiTestScoringStrategy implements ScoringStrategy {
 //                // 只有抢到锁的业务才能执行 AI 调用
 //                return null;
 //            }
-            // 1. 根据 id 查询到题目
-            Question question = questionService.getOne(
-                    Wrappers.lambdaQuery(Question.class).eq(Question::getAppId, appId)
-            );
-            QuestionVO questionVO = QuestionVO.objToVo(question);
-            List<QuestionContentDTO> questionContent = questionVO.getQuestionContent();
-            // 2. 调用 AI 获取结果
-            // 封装 Prompt
-            String userMessage = getAiTestScoringUserMessage(app, questionContent, choices);
-            // AI 生成
-            String result = aiManager.doSyncStableRequest(AI_TEST_SCORING_SYSTEM_MESSAGE, userMessage);
-            // 结果处理
-            int start = result.indexOf("{");
-            int end = result.lastIndexOf("}");
-            String json = result.substring(start, end + 1);
+        // 1. 根据 id 查询到题目
+        Question question = questionService.getOne(
+                Wrappers.lambdaQuery(Question.class).eq(Question::getAppId, appId)
+        );
+        QuestionVO questionVO = QuestionVO.objToVo(question);
+        List<QuestionContentDTO> questionContent = questionVO.getQuestionContent();
+        // 2. 调用 AI 获取结果
+        // 封装 Prompt
+        String userMessage = getAiTestScoringUserMessage(app, questionContent, choices);
+        // AI 生成
+        String result = aiManager.doSyncStableRequest(AI_TEST_SCORING_SYSTEM_MESSAGE, userMessage);
+        // 结果处理
+        int start = result.indexOf("{");
+        int end = result.lastIndexOf("}");
+        String json = result.substring(start, end + 1);
 
-            // 缓存AI结果
-            answerCacheMap.put(cacheKey, json);
+        // 1. 构造答案对象并设置所有属性
+        UserAnswer userAnswer = JSONUtil.toBean(json, UserAnswer.class);
+        userAnswer.setAppId(appId);
+        userAnswer.setAppType(app.getAppType());
+        userAnswer.setScoringStrategy(app.getScoringStrategy());
+        userAnswer.setChoices(JSONUtil.toJsonStr(choices));
+        userAnswer.setResultPicture(aaa);
+        // 2. 将完整的 UserAnswer 对象缓存到 answerCacheMap
+        answerCacheMap.put(cacheKey, JSONUtil.toJsonStr(userAnswer));
+        // 3. 直接返回答案对象
+        return userAnswer;
 
-            // 3. 构造返回值，填充答案对象的属性
-            UserAnswer userAnswer = JSONUtil.toBean(json, UserAnswer.class);
-            userAnswer.setAppId(appId);
-            userAnswer.setAppType(app.getAppType());
-            userAnswer.setScoringStrategy(app.getScoringStrategy());
-            userAnswer.setChoices(JSONUtil.toJsonStr(choices));
-            return userAnswer;
 //        }
 //        finally {
 //            // 锁不为空且必须是被锁状态，必须本人释放

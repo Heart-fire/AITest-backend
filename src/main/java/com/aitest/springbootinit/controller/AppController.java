@@ -18,6 +18,7 @@ import com.aitest.springbootinit.service.UserService;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -166,8 +167,9 @@ public class AppController {
      * @return
      */
     @PostMapping("/list/page/vo")
+    @Cacheable(value = "appVOPageCache", key = "#appQueryRequest.current + '_' + #appQueryRequest.pageSize + '_' + #appQueryRequest.hashCode()")
     public BaseResponse<Page<AppVO>> listAppVOByPage(@RequestBody AppQueryRequest appQueryRequest,
-                                                               HttpServletRequest request) {
+                                                     HttpServletRequest request) {
         long current = appQueryRequest.getCurrent();
         long size = appQueryRequest.getPageSize();
         // 限制爬虫
