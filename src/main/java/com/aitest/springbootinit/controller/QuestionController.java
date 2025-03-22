@@ -332,7 +332,7 @@ public class QuestionController {
         // 建立 SSE 连接对象，0 表示不超时
         SseEmitter emitter = new SseEmitter(0L);
         // AI 生成，sse 流式返回
-        Flowable<ModelData> modelDataFlowable = aiManager.doStreamRequest(GENERATE_QUESTION_SYSTEM_MESSAGE, userMessage, 0.01f);
+        Flowable<ModelData> modelDataFlowable = aiManager.doStreamRequest(GENERATE_QUESTION_SYSTEM_MESSAGE, userMessage, null);
         StringBuilder contentBuilder = new StringBuilder();
         AtomicInteger flag = new AtomicInteger(0);
         modelDataFlowable
