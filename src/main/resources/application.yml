@@ -13,8 +13,8 @@ spring:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.cj.jdbc.Driver
         jdbc-url: jdbc:mysql://localhost:3306/ai_test?allowPublicKeyRetrieval=true&useSSL=false&autoReconnect=true&characterEncoding=utf8
-        username: root
-        password: abcde
+        username:
+        password:
     # 规则配置
     rules:
       sharding:
@@ -53,8 +53,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/ai_test
-    username: root
-    password: abcde
+    username:
+    password:
   # Redis 配置
   # todo 需替换配置，然后取消注释
   redis:
@@ -90,10 +90,10 @@ mybatis-plus:
 # todo 需替换配置
 cos:
   client:
-    accessKey: xxx
-    secretKey: xxx
-    region: xxx
-    bucket: xxx
+    accessKey: xxxx
+    secretKey: xxxx
+    region: xxxx
+    bucket: xxxx
 # 接口文档配置
 knife4j:
   enable: true
@@ -106,7 +106,7 @@ knife4j:
         api-rule-resources:
           - com.aitest.springbootinit.controller
 ai:
-  apiKey: 98ee8b5159f7c65ea53dba7a0c88e2d9.0PuEnWnUPjgv5qMm
+  apiKey: xxxx
 
 
 

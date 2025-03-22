@@ -27,6 +27,7 @@ public class CustomTestScoringStrategy implements ScoringStrategy {
     @Resource
     private ScoringResultService scoringResultService;   // 评分结果表服务
 
+    // 测评类应用 自定义评分
     @Override
     public UserAnswer doScore(List<String> choices, App app) throws Exception {
         Long appId = app.getId();
