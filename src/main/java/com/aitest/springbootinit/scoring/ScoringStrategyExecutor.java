@@ -35,7 +35,7 @@ public class ScoringStrategyExecutor {
         if (appType == null || appScoringStrategy == null) {
             throw new BusinessException(ErrorCode.SYSTEM_ERROR, "应用配置有误，未找到匹配的策略");
         }
-        // 根据注解获取策略
+        // 根据注解获取策略，一个接口三个实现类，每个实现类标记注解
         for (ScoringStrategy strategy : scoringStrategyList) {
             if (strategy.getClass().isAnnotationPresent(ScoringStrategyConfig.class)) {
                 ScoringStrategyConfig scoringStrategyConfig = strategy.getClass().getAnnotation(ScoringStrategyConfig.class);
